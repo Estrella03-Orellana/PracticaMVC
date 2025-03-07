@@ -6,7 +6,7 @@ namespace Practica20250306.appMVCCodeFirst.Models
         public EmpleadoDbContext(DbContextOptions<EmpleadoDbContext> options) : 
      base(options) { }
 
-        public DbSet<Empleado> Empleado { get; set; }
-        public DbSet<Alumno> Alumno { get; set; }
+        public DbSet<Empleado> Empleados { get; set; }
+        public DbSet<Alumno> Alumnos { get; set; }
     }
 }
