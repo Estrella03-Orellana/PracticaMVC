@@ -24,7 +24,7 @@ namespace Practica20250306.AppMVCDataFirst.Controllers
             return View(await _context.Clientes.ToListAsync());
         }
 
-        // GET: Cliente/Details/5
+        // GET: Cliente/Detalles
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -42,15 +42,14 @@ namespace Practica20250306.AppMVCDataFirst.Controllers
             return View(cliente);
         }
 
-        // GET: Cliente/Create
+        // GET: Cliente/Crear
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Cliente/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Cliente/Crear
+   
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Direccion,Telefono,Email")] Cliente cliente)
@@ -64,7 +63,7 @@ namespace Practica20250306.AppMVCDataFirst.Controllers
             return View(cliente);
         }
 
-        // GET: Cliente/Edit/5
+        // GET: Cliente/Editar
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,9 +79,8 @@ namespace Practica20250306.AppMVCDataFirst.Controllers
             return View(cliente);
         }
 
-        // POST: Cliente/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Cliente/Editar
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Direccion,Telefono,Email")] Cliente cliente)
@@ -115,7 +113,7 @@ namespace Practica20250306.AppMVCDataFirst.Controllers
             return View(cliente);
         }
 
-        // GET: Cliente/Delete/5
+        // GET: Cliente/Eliminar
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,7 +131,7 @@ namespace Practica20250306.AppMVCDataFirst.Controllers
             return View(cliente);
         }
 
-        // POST: Cliente/Delete/5
+        // POST: Cliente/Eliminar
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
